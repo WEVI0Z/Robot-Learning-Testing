@@ -1,33 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.10.6 on linux)" generated="20230727 08:59:26.809" rpa="false" schemaversion="4">
-<suite id="s1" name="GoogleSearch" source="/home/INTEXSOFT/alexey.garkaviy/PycharmProjects/pythonProject/TestSuite/Google/FunctionalTestSuite/GoogleSearch.robot">
-<test id="s1-t1" name="This is example test case" line="7">
+<robot generator="Robot 6.1 (Python 3.10.6 on linux)" generated="20230727 09:50:09.479" rpa="false" schemaversion="4">
+<suite id="s1" name="BasicSearch" source="/home/INTEXSOFT/alexey.garkaviy/PycharmProjects/pythonProject/TestSuite/eBay/BasicSearch.robot">
+<test id="s1-t1" name="Verify basic search functionality for eBay" line="8">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://www.google.com</arg>
+<arg>https://www.ebay.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230727 08:59:26.915" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
-<status status="PASS" starttime="20230727 08:59:26.914" endtime="20230727 08:59:28.473"/>
+<msg timestamp="20230727 09:50:09.578" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
+<status status="PASS" starttime="20230727 09:50:09.577" endtime="20230727 09:50:12.527"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="gh-ac"]</arg>
+<arg>mobile</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230727 09:50:12.528" level="INFO">Typing text 'mobile' into text field '//*[@id="gh-ac"]'.</msg>
+<status status="PASS" starttime="20230727 09:50:12.527" endtime="20230727 09:50:12.664"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//*[@id="gh-btn"]</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230727 09:50:12.664" level="INFO">Sending key(s) ('[Return]',) to //*[@id="gh-btn"] element.</msg>
+<msg timestamp="20230727 09:50:16.186" level="INFO">Sending keys [Return]</msg>
+<status status="PASS" starttime="20230727 09:50:12.664" endtime="20230727 09:50:16.300"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>результат. для mobile</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230727 09:50:16.325" level="INFO">Current page contains text 'результат. для mobile'.</msg>
+<status status="PASS" starttime="20230727 09:50:16.300" endtime="20230727 09:50:16.325"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230727 08:59:28.473" endtime="20230727 08:59:28.531"/>
+<status status="PASS" starttime="20230727 09:50:16.325" endtime="20230727 09:50:16.385"/>
 </kw>
-<doc>Google test</doc>
-<tag>functional</tag>
-<status status="PASS" starttime="20230727 08:59:26.914" endtime="20230727 08:59:28.531"/>
+<doc>This test verifies the basic search</doc>
+<tag>Functional</tag>
+<status status="PASS" starttime="20230727 09:50:09.577" endtime="20230727 09:50:16.385"/>
 </test>
-<status status="PASS" starttime="20230727 08:59:26.811" endtime="20230727 08:59:28.532"/>
+<doc>Basic Search Functionality</doc>
+<status status="PASS" starttime="20230727 09:50:09.480" endtime="20230727 09:50:16.386"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">functional</stat>
+<stat pass="1" fail="0" skip="0">Functional</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="GoogleSearch">GoogleSearch</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="BasicSearch">BasicSearch</stat>
 </suite>
 </statistics>
 <errors>
