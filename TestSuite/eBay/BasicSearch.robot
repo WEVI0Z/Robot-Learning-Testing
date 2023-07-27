@@ -10,9 +10,12 @@ Verify basic search functionality for eBay
     [Tags]    Functional
 
     Open Browser    https://www.ebay.com    chrome
+
     Input Text     //*[@id="gh-ac"]    mobile
-    Press Keys    //*[@id="gh-btn"]     [Return]
+    Press Keys    id:gh-btn     RETURN
+    Press Keys    css:#gh-btn     RETURN
     Page Should Contain    результат. для mobile
+
     Close Browser
 
 *** Keywords ***
